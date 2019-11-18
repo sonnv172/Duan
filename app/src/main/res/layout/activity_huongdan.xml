@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".huongdan"
+    android:background="@drawable/go">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/logo"
+            />
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:background="@drawable/button"
+            android:text=" \n         - Bạn chỉ cần chọn một trong 4 đáp \n         án trả lời đúng với câu hỏi\n
+        - Nếu đúng bạn sẽ được trả lời câu\n         tiếp theo. \n
+        - Nếu sai bạn sẽ thua và phải chơi\n         lại từ câu số 1
+        \n
+        - Hoặc nếu bạn chưa tả lời sau 60 giây,\n         bạn sẽ thua và quay lại câu hỏi số 1.\n
+        - Nếu bạn trả lời đsung liên tiếp 30 câu\n
+        hỏi, bạn sẽ thắng\n
+        - trò chơi có 1 quyền trợ giúp đổi câu\n
+        hỏi nếu bạn cảm thấy câu hỏi\n
+        khó quá, nhưng chỉ được phép đổi\n
+        câu hỏi 1 lần."
+
+            android:textSize="20dp"
+            android:textColor="@color/black"></TextView>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Thoát"
+            android:textSize="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
