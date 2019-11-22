@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="350dp"
+        android:layout_height="440dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn"
+        android:text=" \n         \n
+     - Bạn chỉ cần chọn một trong\n      4 đáp án trả lời đúng với câu hỏi\n
+     - Nếu đúng bạn sẽ được trả lời\n      câu tiếp theo. \n
+     - Nếu sai bạn sẽ thua và phải chơi\n      lại từ câu số 1
+        \n
+     - Hoặc nếu bạn chưa tả lời sau 60 \n      giây, bạn sẽ thua và quay lại câu\n       hỏi số 1.\n
+     - Nếu bạn trả lời đúng liên tiếp 30\n      câu hỏi, bạn sẽ thắng\n
+     - Trò chơi có 1 quyền trợ giúp đổi\n
+     câu hỏi, nhưng chỉ được phép đổi\n
+     câu hỏi 1 lần."
+
+        android:textSize="20dp"
+        android:textColor="@color/black"></TextView>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@drawable/btn1"
+        android:text="Đã hiểu"
+        android:id="@+id/btnHieu"
+        android:textColor="@color/r"
+        android:layout_marginBottom="20dp"
+        />
+
+</LinearLayout>

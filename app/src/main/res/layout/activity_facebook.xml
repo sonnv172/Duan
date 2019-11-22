@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Facebook">
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="292dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="250dp"
+        />
+    <Button
+        android:onClick="thoat"
+        android:id="@+id/btnThoat"
+        android:layout_width="80dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Thoát"
+        android:textSize="14dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn1"
+        android:textColor="@color/black"
+        />
+
+</LinearLayout>

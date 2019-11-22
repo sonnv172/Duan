@@ -11,58 +11,63 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
         <ImageView
-            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:src="@drawable/logo"
             />
         <Button
+            android:id="@+id/btnDangnhap"
             android:layout_width="200dp"
             android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:text="Đăng Nhập"
             android:textSize="20dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/button"
             android:textColor="@color/r"
             />
         <Button
+            android:id="@+id/btnDangKy"
             android:layout_width="200dp"
             android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:text="Đăng Ký"
             android:textSize="20dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/button"
             android:textColor="@color/r"
             />
         <Button
+            android:id="@+id/btnFB"
             android:layout_width="200dp"
             android:layout_gravity="center"
             android:layout_height="70dp"
             android:text="Đăng Nhập Bằng Facebook"
             android:textSize="20dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/button"
             android:textColor="@color/r"
             />
         <Button
+            android:id="@+id/btnNguoichoi"
             android:layout_width="200dp"
             android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:text="Người Chơi"
             android:textSize="20dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/button"
             android:textColor="@color/r"
             />
         <Button
+            android:onClick="exit"
+            android:id="@+id/btnThoat"
             android:layout_width="200dp"
             android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:text="Thoát"
             android:textSize="20dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/button"
             android:textColor="@color/r"
             />

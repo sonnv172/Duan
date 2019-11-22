@@ -11,27 +11,23 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
         <ImageView
-            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="200dp"
             android:src="@drawable/logo"
             />
         <TextView
-            android:layout_marginTop="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="380dp"
-            android:background="@drawable/button"
-            android:text=" \n         - Bạn chỉ cần chọn một trong 4 đáp \n         án trả lời đúng với câu hỏi\n
-        - Nếu đúng bạn sẽ được trả lời câu\n         tiếp theo. \n
-        - Nếu sai bạn sẽ thua và phải chơi\n         lại từ câu số 1
-        \n
-        - Hoặc nếu bạn chưa tả lời sau 60 giây,\n         bạn sẽ thua và quay lại câu hỏi số 1.\n
-        - Nếu bạn trả lời đsung liên tiếp 30 câu\n
-        hỏi, bạn sẽ thắng\n
-        - trò chơi có 1 quyền trợ giúp đổi câu\n
-        hỏi nếu bạn cảm thấy câu hỏi\n
-        khó quá, nhưng chỉ được phép đổi\n
-        câu hỏi 1 lần."
+            android:onClick="huongdan"
+            android:layout_marginTop="5dp"
+            android:layout_width="350dp"
+            android:layout_height="220dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn"
+            android:text="
+      - Bạn chỉ cần chọn một trong\n       4 đáp án trả lời đúng với câu hỏi\n
+      - Nếu đúng bạn sẽ được trả lời\n       câu tiếp theo. \n
+      - Nếu sai bạn sẽ thua và phải chơi\n       lại từ câu số 1................................\n
+                \n
+                -Nhấn để xem thêm-"
 
             android:textSize="20dp"
             android:textColor="@color/black"></TextView>
@@ -42,9 +38,10 @@
             android:layout_height="wrap_content"
             android:text="Thoát"
             android:textSize="20dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="25dp"
             android:background="@drawable/button"
             android:textColor="@color/black"
+            android:id="@+id/btnT5"
             />
     </LinearLayout>
 
