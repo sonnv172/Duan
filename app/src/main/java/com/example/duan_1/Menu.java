@@ -4,14 +4,16 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 
 public class Menu extends AppCompatActivity {
-Button btnDN,btnDK,btnFB,btnNC,btnT;
-Intent intent;
+    Button btnDN,btnDK,btnFB,btnNC,btnT;
+    Intent intent;
+    MediaPlayer mediaPlayer;
 private AlertDialog alertDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +24,12 @@ private AlertDialog alertDialog;
         btnFB=findViewById(R.id.btnFB);
         btnNC=findViewById(R.id.btnNguoichoi);
         btnT=findViewById(R.id.btnThoat);
-
+        mediaPlayer=MediaPlayer.create(this,R.raw.funny);
+        mediaPlayer.start();
         btnDN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mediaPlayer.stop();
                Intent intent = new Intent(getApplicationContext(),dangnhap.class);
                 startActivity(intent);
             }
@@ -33,6 +37,7 @@ private AlertDialog alertDialog;
         btnDK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mediaPlayer.stop();
                 intent = new Intent(getApplicationContext(),dangky.class);
                 startActivity(intent);
             }
@@ -40,6 +45,7 @@ private AlertDialog alertDialog;
         btnFB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mediaPlayer.stop();
                 intent = new Intent(getApplicationContext(),Facebook.class);
                 startActivity(intent);
             }
@@ -47,6 +53,7 @@ private AlertDialog alertDialog;
         btnNC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mediaPlayer.stop();
                 intent = new Intent(getApplicationContext(),nguoichoi.class);
                 startActivity(intent);
             }
@@ -54,6 +61,7 @@ private AlertDialog alertDialog;
     }
 
     public void exit(View view) {
+        mediaPlayer.stop();
         Button btnOK,btnCancel;
         AlertDialog.Builder builder= new AlertDialog.Builder(Menu.this);
         View dialog= LayoutInflater.from(Menu.this).inflate(R.layout.my_dialog_exit,null);
@@ -77,5 +85,6 @@ private AlertDialog alertDialog;
         });
         builder.create();
         alertDialog=builder.show();
+
     }
 }

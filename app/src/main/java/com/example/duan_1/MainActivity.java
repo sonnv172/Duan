@@ -18,6 +18,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),Menu.class));
                 finish();
             }
-        }, 1000);
+        }, 800);
     }
 }

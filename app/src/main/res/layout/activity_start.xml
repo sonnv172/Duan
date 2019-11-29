@@ -9,8 +9,9 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="170dp"
-        android:layout_height="170dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:src="@drawable/logo"
@@ -57,7 +58,7 @@
             android:textColor="@color/black" />
 
         <TextView
-            android:id="@+id/cau"
+            android:id="@+id/tvSoCau"
             android:layout_width="112dp"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -71,15 +72,16 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="40dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/button"
+
+        android:id="@+id/tv_timeDown"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/time"
         android:gravity="center"
         android:text="60"
-
-        android:textColor="@color/black"
+        android:textSize="26dp"
+        android:textColor="@color/r"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -93,15 +95,15 @@
         app:layout_constraintTop_toTopOf="parent">
         <TextView
             android:textColor="@color/black"
-            android:id="@+id/tvCauhoi"
+            android:id="@+id/txt_questions"
             android:layout_width="350dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:gravity="center"
             android:background="@drawable/btn"/>
         <Button
-            android:onClick="A"
-            android:id="@+id/btnA"
+
+            android:id="@+id/answer_A"
             android:layout_marginTop="10dp"
             android:layout_width="350dp"
             android:layout_height="50dp"
@@ -109,8 +111,8 @@
             android:gravity="center"
             android:background="@drawable/btn"/>
         <Button
-            android:onClick="B"
-            android:id="@+id/btnB"
+
+            android:id="@+id/answer_B"
             android:layout_marginTop="10dp"
             android:layout_width="350dp"
             android:layout_height="50dp"
@@ -118,8 +120,8 @@
             android:gravity="center"
             android:background="@drawable/btn"/>
         <Button
-            android:onClick="B"
-            android:id="@+id/btnC"
+
+            android:id="@+id/answer_C"
             android:layout_marginTop="10dp"
             android:layout_width="350dp"
             android:layout_height="50dp"
@@ -127,8 +129,7 @@
             android:layout_gravity="center"
             android:background="@drawable/btn"/>
         <Button
-            android:onClick="B"
-            android:id="@+id/btnD"
+            android:id="@+id/answer_D"
             android:layout_marginTop="10dp"
             android:layout_width="350dp"
             android:gravity="center"
