@@ -37,9 +37,9 @@ public class start extends AppCompatActivity implements View.OnClickListener {
     private boolean run;
     private ArrayList<Model_question> questions=new ArrayList<>();
     private boolean checkPickAnswer;
-    int dem1=1,doi=1;
-    MediaPlayer mediaPlayer;
-    private AlertDialog alertDialog;
+    private int dem1=1,doi=1;
+    private MediaPlayer mediaPlayer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -114,7 +114,7 @@ public class start extends AppCompatActivity implements View.OnClickListener {
             return null;
 
         }
-
+        AlertDialog alertDialog;
         @Override
         protected void onProgressUpdate(Integer... values) {
             super.onProgressUpdate(values);
@@ -129,6 +129,7 @@ public class start extends AppCompatActivity implements View.OnClickListener {
                 setText(++i);
             }
             if ((wait==1 && !check) || dem==0 ){
+
                 Button againn,exittt;
                 AlertDialog.Builder builder= new AlertDialog.Builder(start.this);
                 View dialog= LayoutInflater.from(start.this).inflate(R.layout.my_dialog_over,null);
@@ -149,29 +150,10 @@ public class start extends AppCompatActivity implements View.OnClickListener {
                     @Override
                     public void onClick(View view) {
                         mediaPlayer.stop();
-                        Button btnOK,btnCancel;
-                        AlertDialog.Builder builder= new AlertDialog.Builder(start.this);
-                        View dialog= LayoutInflater.from(start.this).inflate(R.layout.my_dialog_exit,null);
-                        builder.setView(dialog);
-                        btnOK=dialog.findViewById(R.id.btnOk);
-                        btnCancel=dialog.findViewById(R.id.btnCancel);
-                        btnOK.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                Intent starMain=new Intent(Intent.ACTION_MAIN);
-                                starMain.addCategory(Intent.CATEGORY_HOME);
-                                startActivity(starMain);
-                                finish();
-                            }
-                        });
-                        btnCancel.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                alertDialog.dismiss();
-                            }
-                        });
-                        builder.create();
-                        alertDialog=builder.show();
+                        Intent starMain=new Intent(Intent.ACTION_MAIN);
+                        starMain.addCategory(Intent.CATEGORY_HOME);
+                        startActivity(starMain);
+                        finish();
                     }
                 });
                 builder.create();
@@ -199,29 +181,10 @@ public class start extends AppCompatActivity implements View.OnClickListener {
                     @Override
                     public void onClick(View view) {
                         mediaPlayer.stop();
-                        Button btnOK,btnCancel;
-                        AlertDialog.Builder builder= new AlertDialog.Builder(start.this);
-                        View dialog= LayoutInflater.from(start.this).inflate(R.layout.my_dialog_exit,null);
-                        builder.setView(dialog);
-                        btnOK=dialog.findViewById(R.id.btnOk);
-                        btnCancel=dialog.findViewById(R.id.btnCancel);
-                        btnOK.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                Intent starMain=new Intent(Intent.ACTION_MAIN);
-                                starMain.addCategory(Intent.CATEGORY_HOME);
-                                startActivity(starMain);
-                                finish();
-                            }
-                        });
-                        btnCancel.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                alertDialog.dismiss();
-                            }
-                        });
-                        builder.create();
-                        alertDialog=builder.show();
+                        Intent starMain = new Intent(Intent.ACTION_MAIN);
+                        starMain.addCategory(Intent.CATEGORY_HOME);
+                        startActivity(starMain);
+                        finish();
                     }
                 });
                 builder.create();
@@ -250,7 +213,7 @@ public class start extends AppCompatActivity implements View.OnClickListener {
             checkPickAnswer=false;
         }
     }
-
+    AlertDialog alertDialog;
     public void exit(View view) {
         Button btnOK,btnCancel;
         AlertDialog.Builder builder= new AlertDialog.Builder(start.this);
