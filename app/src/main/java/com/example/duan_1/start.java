@@ -103,7 +103,7 @@ public class start extends AppCompatActivity implements View.OnClickListener {
 
         @Override
         protected Void doInBackground(Void... voids) {
-            for (dem=60;dem>=0;dem--){
+            for (dem=59;dem>=0;dem--){
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
@@ -128,7 +128,37 @@ public class start extends AppCompatActivity implements View.OnClickListener {
             if (wait==1 && check) {
                 setText(++i);
             }
-            if ((wait==1 && !check) || dem==0 ){
+            if(dem==0){
+                Button againn,exittt;
+                AlertDialog.Builder builder= new AlertDialog.Builder(start.this);
+                View dialog= LayoutInflater.from(start.this).inflate(R.layout.dialog_timeover,null);
+                builder.setView(dialog);
+                againn=dialog.findViewById(R.id.againn);
+                exittt=dialog.findViewById(R.id.exittt);
+                againn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        myDataBase=new My_DataBase(start.this);
+                        questions=myDataBase.getData();;
+                        initView();
+                        alertDialog.dismiss();
+                        doi=1;
+                    }
+                });
+                exittt.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        mediaPlayer.stop();
+                        Intent starMain=new Intent(Intent.ACTION_MAIN);
+                        starMain.addCategory(Intent.CATEGORY_HOME);
+                        startActivity(starMain);
+                        finish();
+                    }
+                });
+                builder.create();
+                alertDialog=builder.show();
+            }
+            if (wait==2 && !check ){
 
                 Button againn,exittt;
                 AlertDialog.Builder builder= new AlertDialog.Builder(start.this);
