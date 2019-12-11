@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 
 public class Model {
 
-    private String T1,T2,T3;
+    private String T1;
+    private String T2;
+    private String T3;
 
     public Model(String t1, String t2, String t3) {
         T1 = t1;

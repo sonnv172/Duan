@@ -44,8 +44,6 @@ public class dangky extends AppCompatActivity {
             }
         });
     }
-
-
     public void Them(View view) {
         dao = new DAO(dangky.this);
         Model s = new Model(t1.getText().toString(), t2.getText().toString(), t3.getText().toString());
@@ -62,27 +60,28 @@ public class dangky extends AppCompatActivity {
         }catch (Exception e){
             Log.e("Error",e.toString());
         }
-
     }
-
-
     public int validateForm(){
         int check = 1;
         if (t1.getText().length() == 0 || t2.getText().length() == 0
                 || t3.getText().length() == 0 || t4.getText().length()==0) {
-            Toast.makeText(getApplicationContext(), "Bạn phải nhập đầy đủ thông ", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Bạn phải nhập đầy đủ thông ",
+                    Toast.LENGTH_SHORT).show();
             check = -1;
         }else if(!Patterns.EMAIL_ADDRESS.matcher(t2.getText()).matches()){
-            Toast.makeText(getApplicationContext(), "Bạn phải nhập đúng định dạng email", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Bạn phải nhập đúng định dạng email",
+                    Toast.LENGTH_SHORT).show();
             check = -1;
         }else {
             String pass = t3.getText().toString();
             String rePass = t4.getText().toString();
             if(pass.length()<6){
-                Toast.makeText(getApplicationContext(), "Mật khẩu phải từ 6 ký tự trở lên", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Mật khẩu phải từ 6 ký tự trở lên",
+                        Toast.LENGTH_SHORT).show();
                 check = -1;
             }else if (!pass.equals(rePass)) {
-                Toast.makeText(getApplicationContext(), "Mật khẩu không trùng khớp", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Mật khẩu không trùng khớp",
+                        Toast.LENGTH_SHORT).show();
                 check = -1;
             }
         }

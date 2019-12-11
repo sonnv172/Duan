@@ -9,7 +9,9 @@ public class Model_question {
     private String caseD;
     private int trueCase;
 
-    public Model_question(int id, String question, String caseA, String caseB, String caseC, String caseD, int trueCase) {
+    public Model_question(int id, String question, String caseA,
+                          String caseB, String caseC, String caseD,
+                          int trueCase) {
         this.id = id;
         this.question = question;
         this.caseA = caseA;

@@ -47,12 +47,11 @@ public class Adapter extends BaseAdapter implements Filterable {
 
     public static class  ViewHoder{
         TextView T1;
-        TextView T2,T3,T4,T5;
+        TextView T2,T3;
         ImageView del;
     }
     @Override
     public View getView(final int i, View view, ViewGroup viewGroup) {
-
         ViewHoder viewHoder;
         if(view==null){
             viewHoder=new ViewHoder();

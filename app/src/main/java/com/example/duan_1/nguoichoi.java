@@ -23,17 +23,14 @@ public class nguoichoi extends AppCompatActivity {
     List<Model> list = new ArrayList<>();
     DAO dao;
     Adapter adapter;
-    ArrayList<String> arrayCourse;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nguoichoi);
         listView=findViewById(R.id.lvNguoichoi);
         btnT3=findViewById(R.id.btnT3);
-        
         registerForContextMenu(listView);
         dao = new DAO(nguoichoi.this);
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
